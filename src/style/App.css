@@ -1,0 +1,131 @@
+/* メッセージ */
+.msg {
+  max-width: 80%;
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 16px;
+  position: relative;
+  word-wrap: break-word;
+  min-width: 120px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* スタッフのメッセージ */
+.staff {
+  margin-right: auto;
+}
+
+.staff .message-content {
+  background-color: #f3f4f6;
+  color: #111827;
+  padding-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.staff .email {
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.staff .timestamp {
+  position: absolute;
+  right: 12px;
+  bottom: 6px;
+  font-size: 11px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+/* ゲストのメッセージ */
+.guest {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.guest .message-content {
+  background-color: #eff6ff;
+  color: #1e40af;
+  padding-bottom: 24px;
+  border: 1px solid #dbeafe;
+}
+
+.guest .email {
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
+  text-align: right;
+}
+
+.guest .timestamp {
+  position: absolute;
+  right: 12px;
+  bottom: 6px;
+  font-size: 11px;
+  color: #3b82f6;
+  white-space: nowrap;
+}
+
+/* メッセージのテキスト */
+.message-content p {
+  line-height: 1.5;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* スクロールバーを非表示にする */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ページネーションのスタイル */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination-button {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  /* padding: 5px 10px; */
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination-button.active {
+  /* border: 1px solid #007bff; */
+  /* background-color: #007bff; */
+  background-color: #000;
+  color: #fff;
+}
